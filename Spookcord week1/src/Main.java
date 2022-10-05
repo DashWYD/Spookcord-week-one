@@ -9,7 +9,8 @@ public class Main {
 
         //ImportantVariables
             //String name
-
+            String[] inventory = {"Golden Shovel"};
+             int  gShovelCount = 0;
 
 
         //Functions
@@ -20,8 +21,8 @@ public class Main {
             //source code:
                  System.out.println("       ");
                 System.out.println("Welcome to my spook cord week 1 project. This project is " +
-                        "a command line rpg game, coded in java as it is a little something new. This game is based on" +
-                        " mystery, and magic. Enjoy make sure to follow me on github, https://github.com/DashWYD/ ");
+                        "a command line story game, coded in java as it is a little something new. This game is based on" +
+                        " Deserts and riches. Enjoy make sure to follow me on github, https://github.com/DashWYD/ ");
                 System.out.println("       ");
                 System.out.println("Lets get started, Enter any number to continue.");
                 int start = scanner.nextInt();
@@ -100,13 +101,62 @@ public class Main {
                             System.out.println("Successfully teleported to arabia, you landed in a random village" +
                                     " in the middle of the desert" +
                                     "You see a woman " + name+ ": "+" Hello, do you know of the river, the river that"+
-                                    " enhances any humans strength?" + "Mary: Yes i do, the river of recovery," +
+                                    " enhances any humans strength?" + " Mary: Yes i do, the river of recovery," +
                                     " a very ancient river.");
 
 
                     }
             };
             timer.schedule(task5, 3000);
-            //Done for tonight 10/2/2022
+
+
+        TimerTask task6 = new TimerTask() {
+            @Override
+            public void run(){
+                System.out.println( name + ": Where can i find this river? Press any number to continue");
+
+
+            }
+        };
+        timer.schedule(task6, 5000);
+        int continueFive = scanner.nextInt();
+
+
+        System.out.println("Mary: Right down the road, be careful the heat is very dangerous.");
+        System.out.println("      ");
+        System.out.println(name + ": Can you send me the coordinates?\n" + " Mary: Sending coordinates...");
+        System.out.println("      ");
+        System.out.println("Thank you for the coordinates, i will be on my way.");
+
+
+        TimerTask task7 = new TimerTask() {
+            @Override
+            public void run(){
+                System.out.println("You continue on your way, it is insanely hot, and you have no water." +
+                        " You begin to think you are going to pass out until you come across the river.");
+                System.out.println("Finally!!!!! I made it. Now you just need a bucket.");
+
+            }
+        };
+        timer.schedule(task7, 3000);
+        System.out.println("   ");
+        System.out.println("Press any number to continue.");
+        int continueSix = scanner.nextInt();
+        System.out.println("   ");
+        System.out.println("You found a bucket, grab it and we will teleport you to john.");
+        System.out.println("   ");
+        System.out.println("Press any number to teleport to john.");
+        int teleport = scanner.nextInt();
+        System.out.println("Teleporting....");
+        System.out.println("   ");
+        System.out.println("John: Welcome back!!! " + name + " I see you listened. ");
+        System.out.println("Give me the water and you shall receive your Golden Shovel. " +
+                "The golden shovel is a very useful tool, very very useful for the future..");
+        System.out.println("   ");
+        System.out.println("Golden shovel + 1, John: thanks for the water!!");
+        gShovelCount += 1;
+        System.out.println("   ");
+        System.out.println("You walk a couple miles and find another city. You see a sign that says: " +
+                "'The city of El cable espeluznante'\n");
     }
 }
